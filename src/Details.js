@@ -1,22 +1,12 @@
-import { Component } from "react";
+import { Component, lazy } from "react";
 import { useParams } from "react-router-dom";
 import Carousel from "./Carousel";
 import ErrorBoundary from "./ErrorBoundary";
-import Modal from "./Modal";
 import ThemeContext from "./ThemeContext";
 
-// const Details = () => {
-//   const { id } = useParams();
-//   return <h2>{id}</h2>;
-// };
+const Modal = lazy(() => import("./Modal"));
 
 class Details extends Component {
-  // constructor(props) {
-  //   super(props);
-
-  //   this.state = { loading: true };
-  // }
-
   state = { loading: true };
 
   async componentDidMount() {
@@ -36,7 +26,7 @@ class Details extends Component {
       return <h2>loading...</h2>;
     }
 
-    // throw new Error("you crashed");
+    // throw new Error("crashed");
 
     const { animal, breed, city, state, description, name, images, showModal } =
       this.state;

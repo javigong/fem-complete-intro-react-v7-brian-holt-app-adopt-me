@@ -1,7 +1,8 @@
 {
   "name": "fem-adopt-me",
   "version": "1.0.0",
-  "description": "",
+  "description": "Adopt pets via adopt-me",
+  "main": "src/App.js",
   "scripts": {
     "dev": "parcel src/index.html",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
